@@ -1,3 +1,4 @@
+#Boying Tang
 import turtle
 import math
 import random
@@ -33,13 +34,10 @@ class Sun:
 		self._size=size
 	def inside(self,location):
 		a=[math.pow(x-y,2) for x,y in zip(self._center, location)] #a^2 an b^2
-		if self._size >= math.sqrt(a[0]+a[1]):
-			return True
-		else:
-			return False
+		return self._size >= math.sqrt(a[0]+a[1]):
+
 	def onClick(self,location):
 		if self.inside(location):
-			print(self)
 			global last
 			last=self
 			self.setColor(randomColor())
@@ -50,7 +48,7 @@ class Planet(Sun):
 		self._size=size
 		self._color=color
 		self._orbitAround=orbitAround
-		self._orbitRadius=orbitRadius#rand(self._size//2+orbitAround.getSize()) #based on planet size and orbiting body size
+		self._orbitRadius=orbitRadius #based on planet size and orbiting body size
 		self._speed=speed
 	def getRadius(self):
 		return self._orbitRadius
