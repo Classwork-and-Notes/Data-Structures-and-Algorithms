@@ -1,0 +1,30 @@
+Hash Table, no order
+Insert: O(1)
+Delete: O(1)
+Search: O(1)
+--------------------
+hash table used to implement dicitonaries
+difference being in dictionaries keys have to be strings and a hash table isn't iterable
+keys must be immutable; strings are immutable
+hash function: takes data and turns it into and integer
+eg. to hash; hash the password
+system hash()
+hash table: list of list of tuples
+
+if n is size of data
+and b is # of bucket
+n/b is "load factor"
+choose b: n<b<2n
+
+
+Balanced Binary Search Tree, order support
+Insert: O(logn)
+Delete: O(logn)
+Search: O(logn)
+
+
+Skip List
+Insert: O(1)
+Delete: O(1)
+Search: O(1)
+
